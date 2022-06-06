@@ -15,9 +15,5 @@ class Book():
         self.year = year
 
     def to_dict(self):
-        return {"id": self.id, "Name": self.name, "Description": self.description, "ISBN": self.isbn, "Page Count": self.page_count, "Issued": self.issued, "Author": self.author, "Year": self.year}
-
-
-# Checking the class
-book = Book(12, "atomic habits", "build long habits", "213-54-3434-344", 234, True, "James Clear", 2018)
-print(book.to_dict())
+        dictionary = {"id": self.id, "Name": self.name, "Description": self.description, "ISBN": self.isbn, "Page Count": self.page_count, "Issued": self.issued, "Author": self.author, "Year": self.year}
+        return dictionary

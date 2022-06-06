@@ -1,4 +1,5 @@
-from book import Book
+from operator import index
+import book
 import json
 
 def print_options():
@@ -60,7 +61,8 @@ def book_info():
 def create_book():
     print("Please provide the following information to create a new book:")
     new_created_book = book_info()
-    booked_book = Book(new_created_book["id"],new_created_book["Name"], new_created_book["Description"], new_created_book["ISBN"], new_created_book["Page Count"], new_created_book["Issued"], new_created_book["Author"], new_created_book["Year"])
+    booked_book = book.Book(new_created_book["id"],new_created_book["Name"], new_created_book["Description"], new_created_book["ISBN"], new_created_book["Page Count"], new_created_book["Issued"], new_created_book["Author"], new_created_book["Year"])
+    print(booked_book.to_dict())
     return booked_book
 
 
@@ -75,3 +77,22 @@ def save_books(books):
     
     except:
         print("There's an error in saving the books!!!")
+
+def load_books():
+    try:
+        file = open("books.dat", "r")
+        loaded_books = json.loads(file.read())
+        books = []
+        for each_book in loaded_books:
+            new_obj = book.Book(each_book["id"],each_book["Name"], each_book["Description"], each_book["ISBN"], each_book["Page Count"], each_book["Issued"], each_book["Author"], each_book["Year"])
+            books.append(new_obj)
+        print("Books loaded successfully ... ")
+        return books
+    except:
+        print("The file doesn't exist or some error occured while loading the file!!!")
+
+def find_book(books, id):
+    for index, each_book in enumerate(books):
+        if each_book.id == id:
+            return index
+    return None
