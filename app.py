@@ -11,13 +11,18 @@ while(True):
         books.append(my_functions.create_book())
     elif user_input == "2":
         my_functions.save_books(books)
-        print("book is saved ...")
     elif user_input == "3":
         books = my_functions.load_books()
     elif user_input == "4":
-        print(my_functions.find_book(books, "4234"))
+        my_functions.issue_book(books)
+    elif user_input == "5":
+        my_functions.return_book(books)
+    elif user_input == "6":
+        my_functions.update_book(books)
+    elif user_input == "7":
+        my_functions.show_all_books(books)
+    elif user_input == "8":
+        my_functions.show_specific_book(books)
     else:
         continue
-        # everytime clear the screen to show the print_options() function's menu 
-    #os.system('cls')
     

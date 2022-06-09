@@ -1,0 +1,22 @@
+[
+    {
+        "id": "1",
+        "Name": "Deep Learning",
+        "Description": "deep learnign book",
+        "ISBN": "2130523-25-3-",
+        "Page Count": 621,
+        "issued": false,
+        "Author": "Ian Goodfellow",
+        "Year": 2016
+    },
+    {
+        "id": "21",
+        "Name": "Murder!",
+        "Description": "Crime",
+        "ISBN": "214",
+        "Page Count": 239999,
+        "issued": true,
+        "Author": "Arnald Bernott",
+        "Year": 3
+    }
+]

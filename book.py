@@ -15,5 +15,5 @@ class Book():
         self.year = year
 
     def to_dict(self):
-        dictionary = {"id": self.id, "Name": self.name, "Description": self.description, "ISBN": self.isbn, "Page Count": self.page_count, "Issued": self.issued, "Author": self.author, "Year": self.year}
+        dictionary = {"id": self.id, "Name": self.name, "Description": self.description, "ISBN": self.isbn, "Page Count": self.page_count, "issued": self.issued, "Author": self.author, "Year": self.year}
         return dictionary
