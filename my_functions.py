@@ -12,7 +12,7 @@ def print_options():
     print("5-return a book")
     print("6-update a book")
     print("7-show all books")
-    print("8-show book")
+    print("8-show a specific book")
 # create_book_function
 
 
@@ -22,7 +22,7 @@ def input_book_info():
     description = input("Description: ")
     isbn = input("ISBN: ")
     page_count = int(input("Page Count: "))
-    issued = input("Issued: y/Y for True, anything else for False")
+    issued = input("Issued: y/Y for True, anything else for False: ")
     issued = (issued == "y" or issued == "Y")
     author = input("Author Name: ")
     year = int(input("Year"))
