@@ -12,6 +12,7 @@ This is a simple Library-Management-System designed purely in Python. It is writ
 
 ## 1-Creating a new book:
 This module asks the user to create new book by entering its information about book ID,book name, book description,book ISBN,book's page count, if it is issued or not, and its year of publication. The book is displayed immediately in the form of dictionary. This module is based on the class 'Book' which is written in 'book.py' module. 
+![Test Image 1](Create a book.png)
 
 ## 2-Saving books locally:
 The next step is to save the book. It leads to saving book in 'books.dat' file locally on machine. The gathered data from the user in first module (creating the book) is sent to the Book class which converts that information in dictinary. The save_books function accesses that dictionary, dumps that dictionary using json function 'json.dumps()'. Later, this json object is stored in the books.dat data file.
