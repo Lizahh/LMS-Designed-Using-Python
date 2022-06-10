@@ -13,19 +13,21 @@ def print_options():
     print("6-update a book")
     print("7-show all books")
     print("8-show a specific book")
+    print("Your Option: ")
 # create_book_function
 
 
 def input_book_info():
-    id = input("ID: ")
-    name = input("Name: ")
-    description = input("Description: ")
-    isbn = input("ISBN: ")
-    page_count = int(input("Page Count: "))
-    issued = input("Issued: y/Y for True, anything else for False: ")
+    id = input("Enter the book ID: ")
+    name = input("Enter the book name: ")
+    description = input("Enter the description of the book: ")
+    isbn = input("Enter ISBN of the book: ")
+    page_count = int(input("Enter page count of the book: "))
+    issued = input("Enter if the book is issued: y/Y for True, anything else for False: ")
     issued = (issued == "y" or issued == "Y")
-    author = input("Author Name: ")
-    year = int(input("Year"))
+    author = input("Enter the author name: ")
+    year = int(input("Enter the year of book publication: "))
+    
     return {
         'id': id,
         'name': name,
@@ -118,7 +120,7 @@ def return_book(books):
 
 
 def update_book(books):
-    id = input("Enter the ID of book you want to update")
+    id = input("Enter the ID of book you want to update: ")
     index = find_book(books, id)
     if index != None:
         new_book = create_book()
@@ -137,7 +139,7 @@ def show_all_books(books):
 
 
 def show_book(books):
-    id = input("please enter id of the book you're looking for")
+    id = input("please enter id of the book you're looking for: ")
     index = find_book(books, id)
     if index != None:
         print(books[index].to_dict())
