@@ -21,9 +21,11 @@ It will load the books from the disk. It loads the json data from books.dat, con
 
 ## 4-Issuing book:
 This function serves the basic purpose of library management system. If a student/user comes to issue a book, he will be asked to input the ID of the book. That ID will be searched thoroughly in the books.dat file using find_book function. Then, the book will be issued to the student and the 'issue status' of book will be replaced from False to True in the books.dat file, immediately. Later a message is displayed that the book is issued, successfully.
+* Nota bene: You must need to call the save book function after issuing book, to update the information in data file.
 
 ## 5-Returning a book
 This function works almost the same like issuing book function. It asks the student/user come to return a book, it checks if the book is issued from this library by confirming if its issued_status is True. If so, then the issued_status is set to False and a message is displayed that the book is returned, successfully.
+* Nota bene: You must need to call the save book function after getting the returned book, to update the information in data file.
 
 ## 6-Updated a book
 This function is used if the user want to update the information about a book in the data file. It asks the user to enter the ID of the book and checks if the book exists in the library. If yes, then it call the create book function to re-enter the information about the book and then update it.
