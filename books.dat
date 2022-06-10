@@ -1,22 +1,22 @@
 [
     {
         "id": "1",
-        "Name": "Deep Learning",
-        "Description": "deep learnign book",
-        "ISBN": "2130523-25-3-",
-        "Page Count": 621,
+        "name": "Deep Learning",
+        "description": "deep learnign book",
+        "isbn": "2130523-25-3-",
+        "page_count": 621,
         "issued": false,
-        "Author": "Ian Goodfellow",
-        "Year": 2016
+        "author": "Ian Goodfellow",
+        "year": 2016
     },
     {
         "id": "21",
-        "Name": "Murder!",
-        "Description": "Crime",
-        "ISBN": "214",
-        "Page Count": 239999,
-        "issued": true,
-        "Author": "Arnald Bernott",
-        "Year": 3
+        "name": "Murder!",
+        "description": "Crime",
+        "isbn": "214",
+        "page_count": 239999,
+        "issued": false,
+        "author": "Arnald Bernott",
+        "year": 3
     }
 ]
